@@ -34,6 +34,7 @@ class RollDice extends Component {
         </Row>
       </div>
           {this.state.clickable ? <button onClick={this.rollMe}>Roll</button> : <button disabled>Rolling</button>}
+          {this.state.die1 === 'one' && this.state.die2 === 'one' ? <h3>Snake Eyes</h3> : this.state.die1 === this.state.die2 ? <h3>Doubles</h3> : ''}
       </>
     )
   }
