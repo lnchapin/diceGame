@@ -15,8 +15,9 @@ class RollDice extends Component {
     let dieSides = ['one', 'two', 'three', 'four', 'five', 'six']
     let newOne = dieSides[Math.floor(Math.random()*(dieSides.length))]
     let newTwo = dieSides[Math.floor(Math.random()*(dieSides.length))]
-    this.setState({die1: newOne, die2: newTwo});
-
+    setTimeout(() => {
+      this.setState(() => ({clickable: true, die1: newOne, die2: newTwo}))
+    }, 1000);
   }
 
   render(){
